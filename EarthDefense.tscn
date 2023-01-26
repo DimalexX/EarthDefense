@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Planet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Laser.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Station.tscn" type="PackedScene" id=3]
+[ext_resource path="res://EarthDefense.gd" type="Script" id=4]
+[ext_resource path="res://Gun.tscn" type="PackedScene" id=5]
+
+[node name="EarthDefense" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1536.0
+margin_bottom = 900.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Planet" parent="." instance=ExtResource( 1 )]
+position = Vector2( 767, 709 )
+
+[node name="Station" parent="Planet" instance=ExtResource( 3 )]
+position = Vector2( 0, -90 )
+
+[node name="Station2" parent="Planet" instance=ExtResource( 3 )]
+position = Vector2( 0, 93 )
+rotation = 3.14159
+
+[node name="Laser" parent="Planet" instance=ExtResource( 2 )]
+position = Vector2( 91, -54 )
+rotation = 1.0472
+
+[node name="Laser2" parent="Planet" instance=ExtResource( 2 )]
+position = Vector2( -91, 54 )
+rotation = -2.0944
+
+[node name="Gun" parent="Planet" instance=ExtResource( 5 )]
+position = Vector2( -75, -45 )
+rotation = -1.0472
+
+[node name="Gun2" parent="Planet" instance=ExtResource( 5 )]
+position = Vector2( 77, 47 )
+rotation = 2.0944
