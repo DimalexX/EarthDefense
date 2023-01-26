@@ -5,7 +5,7 @@ onready var scene_resource:= preload("res://Asteroid.tscn")
 
 func _ready():
 	randomize()
-	new_spawn_asteroids(2000)
+	new_spawn_asteroids(1000)
 	
 
 func new_spawn_asteroids(num):
